@@ -10,4 +10,4 @@ class tic_tac_toe
   
 end
     
-
+game = TicTacToe.new
