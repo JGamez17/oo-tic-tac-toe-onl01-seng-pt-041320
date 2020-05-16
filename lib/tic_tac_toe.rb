@@ -92,22 +92,36 @@ class TicTacToe
    def over?
         won? || draw? ? true : false
    end
+   
+   def winner
+        WIN_COMBINATIONS.each do |combo|
+            index_0 = combo[0]
+            index_1 = combo[1]
+            index_2 = combo[2]
 
-    
-    
-    
+            position_1 = @board[index_0]
+            position_2 = @board[index_1]
+            position_3 = @board[index_2]
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+            if position_1 == "X" && position_2 == "X" && position_3 == "X"
+                return "X"
+            elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+                return "O"
+            end
+        end
+        return nil
+    end
+
+    def play
+        until over? == true
+          turn
+        end
+      
+        if won?
+          puts "Congratulations #{winner}!"
+        elsif draw?
+          puts "Cat's Game!"
+        end
+      end 
     
 end 
