@@ -2,3 +2,10 @@
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
+class tic_tac_toe
+
+  def initialize(game)
+    @game= game
+  end
+    
+
