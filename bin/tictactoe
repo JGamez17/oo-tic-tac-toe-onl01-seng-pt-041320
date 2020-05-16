@@ -8,6 +8,10 @@ class tic_tac_toe
     @game= game
   end
   
+  def game
+    @game
+  end
+  
 end
     
 game = TicTacToe.new
