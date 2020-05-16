@@ -7,5 +7,7 @@ class tic_tac_toe
   def initialize(game)
     @game= game
   end
+  
+end
     
 
